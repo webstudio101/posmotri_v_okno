@@ -44,18 +44,7 @@ ol {
   justify-content: center;
 }
 
-.content {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1140px;
-  /*  margin: 133px 30px; */
 
-  /* Шаг1:  METHOD:2 1. Расположить блок .content посередине .page. */
-  /*  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%); */
-}
 
 .result__video {
   max-width: 711px;
@@ -69,10 +58,21 @@ ol {
   align-items: flex-end;
 
   /* Шаг1: 3. Задать горизонтальные размеры .content */
-  height: 534px;
+  min-height: 534px;
 
   /* Шаг1: 3. и отступы между его элементами. */
   gap: 30px;
+
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1140px;
+  /*  margin: 133px 30px; */
+
+  /* Шаг1:  METHOD:2 1. Расположить блок .content посередине .page. */
+  /*  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
 }
 
 .search-form {
@@ -96,14 +96,17 @@ ol {
 
 .content__details {
   /* Шаг1: 6. Растянуть .content__details во всю доступную ширину и высоту контейнера и добавить отступы между заголовком и зоной с карточками. */
-  width: 100%;
+  /*width: 100%;
 
-  /* Шаг1: 6. */
-  height: 100%;
+  /* Шаг1: 6. 
+  height: 100%;*/
 
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
+
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .result__video-container {
@@ -122,8 +125,9 @@ ol {
 
 .result__video {
   /* Шаг2: 2. Замостить видео в этот контейнер так, чтобы оно занимало всю ширину и высоту и не выходило за пределы.*/
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  object-fit: fill;
 }
 
 .content__list {
@@ -146,11 +150,18 @@ ol {
 .content__video-card-thumbnail {
   /* Шаг2: 5. Задать размеры .content__video-card-thumbnail и замостить в них изображение.*/
   width: 194px;
+  height: 103px;
+  object-fit: fill;
+ 
 }
 
 .content__video-card-description-container {
   /* Шаг2: 6. Сделать так, чтобы .content__video-card-description-container занимал всё доступное пространство, не занятое картинкой. */
   flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description-container:hover {
@@ -169,7 +180,7 @@ ol {
 
 .title {
   /* Шаг4: 2. Оформить элемент .title */
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70px;
@@ -191,13 +202,13 @@ ol {
 }
 
 
-.content__card-link:focus {
+.content__card-link:focus-visible {
   outline: 1px solid white;
 }
 
 .content__video-card-title {
   /* Шаг4: 4.Оформить текст .content__video-card-title. */
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -246,10 +257,13 @@ fieldset {
   margin-right: 15px;
 }
 
-.search-form__label:focus {
+.search-form__label:has(:focus-visible) {
+  /*Шаг6 Текстовое поле ввода : делать границу у лейбла, который его окружает. Лейбл должен получать границу только когда у поля находится в состоянии focus-visible */
   outline: 1px solid white;
   outline-offset: 1px;
 }
+
+
 
 .search-form__label-text:hover {
   text-decoration: underline;
