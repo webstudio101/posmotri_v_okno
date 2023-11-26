@@ -83,7 +83,7 @@ ol {
   height: 298px;
 
   /* Шаг1: 5. и добавить скролл при переполнении. */
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .content__details {
@@ -273,7 +273,7 @@ fieldset {
   outline-offset: 1px;
 }
 
-.search-form__label-text:hover {
+.search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -318,21 +318,10 @@ fieldset {
   width: 19px;
   height: 19px;
   outline: 1px solid white;
-  position: relative;
   margin-right: 5px;
 }
 
 .search-form__checkbox:checked ~ .search-form__pseudo-checkbox:after {
-  /* Шаг6 Активный чекбокс 
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-
-  width: 15px;
-  height: 15px;
-  background: white;
-*/
   content: "";
   display: inline-block;
   margin-left: 2px;
