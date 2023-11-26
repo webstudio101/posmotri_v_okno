@@ -135,6 +135,7 @@ ol {
 .content__list {
   /* Шаг3: Прелоадеры должны появляться в двух местах: поверх .content__list. */
   position: relative;
+  min-width: 399px;
 }
 
 .content__list-item:not(:last-child) {
@@ -185,6 +186,7 @@ ol {
   font-weight: 700;
   line-height: 70px;
   margin-bottom: 26px;
+  text-transform: uppercase;
 }
 
 .content__accent {
@@ -225,6 +227,7 @@ ol {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .content__video-card-description {
@@ -282,9 +285,12 @@ fieldset {
 
 
 
-.search-form__fieldset-title:hover {
+
+
+
+.search-form__label-text:hover {
   text-decoration: underline;
-  /*text-underline-position: under;*/
+  text-underline-position: under;
 }
 
 
@@ -292,7 +298,7 @@ fieldset {
 .search-form__textfield {
   /* Шаг5 4. При вёрстке текстового поля обращайте внимание на управление размерами, границей, цветом текста, семейством шрифта, размером шрифта, фоном.
    Некоторые из этих свойств не наследуются..*/
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   width: 225px;
   font-size: 18px;
   font-weight: 400;
@@ -313,6 +319,14 @@ fieldset {
   -moz-appearance: none;
 
   /*outline: none;*/
+}
+
+.search-form__textfield:focus{
+  outline: none;
+}
+
+.search-form__textfield:active{
+  outline: 1px solid white;
 }
 
 .search-form__pseudo-checkbox {
@@ -339,7 +353,7 @@ fieldset {
 
 /* Кнопки  */
 .button {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -367,7 +381,7 @@ fieldset {
   outline: none
 }
 
-.button:has(:focus-visible) {
+.button:focus-visible {
   outline: 1px solid white;
   outline-offset: 1px;
 }
