@@ -38,7 +38,7 @@ ol {
 }
 
 .page {
-  /* Шаг1:  METHOD:1 1. Расположить блок .content посередине .page. */
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,75 +49,34 @@ ol {
 }
 
 .content {
-  /* Шаг1: 2. Расположить элементы .content в строку */
   display: flex;
-
-  /* Шаг1: 2. прижав к низу вертикальной оси. */
   align-items: flex-end;
-
-  /* Шаг1: 3. Задать горизонтальные размеры .content */
   min-height: 534px;
-
-  /* Шаг1: 3. и отступы между его элементами. */
   gap: 30px;
-
   margin: 0 auto;
   width: 100%;
   max-width: 1140px;
-  /*  margin: 133px 30px; */
 }
 
 .search-form {
-  /* Шаг1: 4. Расположить элементы .search-form в строку. */
   display: flex;
-
-  /* Шаг1: 4. пропорционально распределить между ними свободное пространство */
   justify-content: space-between;
-
-  /* Шаг1: 4. прижать их к началу контейнера.  */
   align-items: flex-start;
 }
 
-.content__list {
-  /* Шаг1: 5. Установить вертикальный размер для .content__list */
-  height: 298px;
-  padding: 2px;
-
-  /* Шаг1: 5. и добавить скролл при переполнении. */
-  overflow-y: auto;
-}
-
 .content__details {
-  /* Шаг1: 6. Растянуть .content__details во всю доступную ширину и высоту контейнера и добавить отступы между заголовком и зоной с карточками. */
-  /*width: 100%;
-
-  /* Шаг1: 6. 
-  height: 100%;*/
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-
   object-fit: cover;
   object-position: 50% 50%;
 }
 
 .result__video-container {
-  /* Шаг2: 1 Задать размеры контейнеру */
   width: 711px;
-
-  /* Шаг2: 1 Задать размеры контейнеру */
   height: 386px;
-
-  /* Шаг2: 1 добавить отступ снизу.*/
   margin-bottom: 16px;
-
-  /* Шаг3: Прелоадеры должны появляться в двух местах: поверх .result__video-container  */
   position: relative;
 }
 
 .result__video {
-  /* Шаг2: 2. Замостить видео в этот контейнер так, чтобы оно занимало всю ширину и высоту и не выходило за пределы.*/
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -125,56 +84,47 @@ ol {
 }
 
 .content__list {
-  /* Шаг3: Прелоадеры должны появляться в двух местах: поверх .content__list. */
   position: relative;
   min-width: 399px;
+  height: 298px;
   padding: 2px;
+  overflow-y: auto;
 }
 
 .content__list-item:not(:last-child) {
-  /* Шаг2: 3. Создать вертикальные отступы между элементами .content__list-item (у всех, кроме последнего)*/
   margin-bottom: 30px;
 }
 
 .content__video-card {
-  /* Шаг2: 4. Расположить элементы внутри контейнера .content__video-card в строку, прижав к началу контейнера по дополнительной оси.*/
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .content__video-card-thumbnail {
-  /* Шаг2: 5. Задать размеры .content__video-card-thumbnail и замостить в них изображение.*/
   width: 194px;
   height: 103px;
   object-fit: cover;
 }
 
 .content__video-card-description-container {
-  /* Шаг2: 6. Сделать так, чтобы .content__video-card-description-container занимал всё доступное пространство, не занятое картинкой. */
   flex: 1;
-
   max-width: 200px;
 }
 
-/*.content__card-link:hover {
+.content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: 5px;
-  /*text-underline-position: under;
 }
-*/
+
 
 .search-form__fieldset-title {
-  /* Шаг4: 1. Оформить текст элементов .search-form__fieldset-title */
   font-size: 18px;
   font-weight: 400;
   line-height: 22px;
-
   margin-bottom: 5px;
 }
 
 .title {
-  /* Шаг4: 2. Оформить элемент .title */
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
@@ -184,21 +134,14 @@ ol {
 }
 
 .content__accent {
-  /* Шаг4: 2. Оформить элемент .title и вложенный в него .content__accent*/
   color: #545050;
 }
 
 .content__card-link {
-  /* Шаг4: 3. и заменить цвет текста у ссылки .content__card-link. */
   color: white;
-  /* Шаг4: 3. Убрать дефолтное подчёркивание  */
   text-decoration: none;
-
-  /*padding: 2px;*/
-
-  /* Шаг7  Состояния карточек*/
+  padding: 2px;
   display: block;
-  /*margin: 2px;*/
 }
 
 .content__card-link:focus {
@@ -210,14 +153,11 @@ ol {
 }
 
 .content__video-card-title {
-  /* Шаг4: 4.Оформить текст .content__video-card-title. */
   font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
-
   margin-bottom: 6px;
-
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -225,23 +165,13 @@ ol {
 }
 
 .content__video-card-description {
-  /* Шаг4: 5. присмотреться к высоте линии в .content__video-card-description. */
   line-height: 16px;
-
   max-height: 65px;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
-.content__video-card-description-container:hover {
-  text-decoration: underline;
- 
-}
-
-
-
 
 .visually-hidden {
   /* Шаг 5. */
@@ -255,23 +185,16 @@ ol {
 }
 
 fieldset {
-  /* Шаг5  Сбросьте border у fieldset.*/
   border: none;
 }
 
 .search-form__checkbox-list {
-  /* Шаг5 5. */
   display: flex;
 }
 
 .search-form__label {
-  /* Шаг5 3.  Мы рекомендуем установить на кликабельные элементы cursor: pointer;.*/
   cursor: pointer;
-
-  /* Шаг5 2. расставить элементы внутри .search-form__label в линию*/
   display: flex;
-
-  /* Шаг5 2.  ширину контейнера под размер внутренних элементов.*/
   width: fit-content;
 }
 
@@ -280,20 +203,16 @@ fieldset {
 }
 
 .search-form__label:has(:focus-visible) {
-  /*Шаг6 Текстовое поле ввода : делать границу у лейбла, который его окружает. Лейбл должен получать границу только когда у поля находится в состоянии focus-visible */
   outline: 1px solid white;
   outline-offset: 1px;
 }
 
-/*.search-form__checkbox-list .search-form__label:hover */
 .search-form__label:hover .search-form__label-text{
   text-decoration: underline;
   text-underline-position: under;
 }
 
 .search-form__textfield {
-  /* Шаг5 4. При вёрстке текстового поля обращайте внимание на управление размерами, границей, цветом текста, семейством шрифта, размером шрифта, фоном.
-   Некоторые из этих свойств не наследуются..*/
   font-family: "Fira Sans Condensed", sans-serif;
   width: 225px;
   font-size: 18px;
@@ -306,15 +225,9 @@ fieldset {
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   padding: 2.5px 14px 2.5px 0;
-
-  /* Шаг5 6.Текстовому полю нужно задать свойство appearance: none;. Так в разных браузерах будут нужные вам стили. Это трюк.*/
   appearance: none;
-  /*safari chrome*/
   -webkit-appearance: none;
-  /*mozilla*/
   -moz-appearance: none;
-
-  /*outline: none;*/
 }
 
 .search-form__textfield:focus {
@@ -326,7 +239,6 @@ fieldset {
 }
 
 .search-form__pseudo-checkbox {
-  /* Шаг5 7.*/
   display: block;
   width: 19px;
   height: 19px;
@@ -343,7 +255,6 @@ fieldset {
   background: white;
 }
 
-/* Кнопки  */
 .button {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -351,12 +262,10 @@ fieldset {
   line-height: 22px;
   text-align: center;
   color: white;
-
   border: 1px solid white;
   padding: 6px 0;
   width: 100%;
   background: none;
-
   cursor: pointer;
 }
 
@@ -366,7 +275,6 @@ fieldset {
 
 .button:hover {
   text-decoration: underline;
-  /*text-underline-position: under;*/
 }
 
 .button:focus {
@@ -375,7 +283,7 @@ fieldset {
 
 .button:focus-visible {
   outline: 1px solid white;
-  /*outline-offset: 1px;*/
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -385,11 +293,8 @@ fieldset {
 
 .more-button {
   text-underline-position: under;
-  /*Также можно добавить для кнопки в списке внешние отступы в 2 пикселя.*/
-  /*margin: 2px;*/
 }
 
 .content__card-link_current {
-  /* Шаг7  Состояния карточек*/
   background-color: rgba(84, 80, 80, 1);
 }
