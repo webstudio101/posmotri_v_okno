@@ -38,7 +38,6 @@ ol {
 }
 
 .page {
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,7 +115,6 @@ ol {
   text-decoration: underline;
 }
 
-
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
@@ -146,7 +144,7 @@ ol {
 
 .content__card-link:focus {
   outline: none;
-} 
+}
 
 .content__card-link:focus-visible {
   outline: 1px solid white;
@@ -174,7 +172,6 @@ ol {
 }
 
 .visually-hidden {
-  /* Шаг 5. */
   position: absolute;
   inline-size: 1px;
   block-size: 1px;
@@ -207,7 +204,7 @@ fieldset {
   outline-offset: 1px;
 }
 
-.search-form__label:hover .search-form__label-text{
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -246,7 +243,7 @@ fieldset {
   margin-right: 5px;
 }
 
-.search-form__checkbox:checked ~ .search-form__pseudo-checkbox:after {
+.search-form__checkbox:checked~.search-form__pseudo-checkbox:after {
   content: "";
   display: inline-block;
   margin-left: 2px;
